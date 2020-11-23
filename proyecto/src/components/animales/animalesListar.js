@@ -9,9 +9,9 @@ import {
 import IconE from 'react-native-vector-icons/FontAwesome';
 import {Icon} from 'react-native-elements';
 import generalStyle from '../styleBase/generalStyle';
-import styles from './styleClient';
+import styles from '../client/styleClient';
 
-import {clientListAll} from '../../api_functions/clienListAll';
+import {getPalabrasPorTipo} from '../../api_functions/getPalabrasPorTipo';
 function separator() {
   return <View style={generalStyle.separatorFL} />;
 }
@@ -24,37 +24,28 @@ export default function ClientList({navigation}) {
       <View>
         <TouchableOpacity
           onPress={() =>
-            navigation.navigate('TicketAdd', {
-              id: objClient.client_id,
-              nombre: objClient.name,
+            navigation.navigate('AnimalDetalle', {
+              ID: objClient.ID,
+              PALABRA: objClient.PALABRA,
+              IMAGEN: objClient.nombreimagen,
             })
           }
           underlayColor="white">
           <View style={styles.item}>
             <Icon
-              name="user-circle"
+              name="arrow-circle-right"
               type="font-awesome-5"
               color="#517fa4"
               iconStyle={{marginRight: 10, marginTop: 4}}
             />
-
             <Text style={styles.title}>{objClient.PALABRA}</Text>
-            <Text
-              style={{
-                color: 'orange',
-                marginTop: 3,
-                fontSize: 18,
-              }}>
-              {' '}
-              {objClient.TRADUCCION}
-            </Text>
           </View>
         </TouchableOpacity>
       </View>
     );
   }
   useEffect(() => {
-    clientListAll().then(function(data) {
+    getPalabrasPorTipo(1).then(function(data) {
       setClients(data.data);
       setLoad(false);
     });
@@ -71,20 +62,6 @@ export default function ClientList({navigation}) {
 
     return (
       <View style={generalStyle.container}>
-        <TouchableOpacity
-          onPress={() => navigation.navigate('ClientNew')}
-          underlayColor="white">
-          <View style={styles.item}>
-            <Icon
-              name="user-plus"
-              type="font-awesome-5"
-              color="#514C6C"
-              iconStyle={{marginRight: 10, marginTop: 4}}
-            />
-            <Text style={styles.title}>Agregar cliente nuevo</Text>
-          </View>
-        </TouchableOpacity>
-
         <FlatList
           style={styles.flatl}
           data={clients}

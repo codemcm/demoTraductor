@@ -1,26 +1,78 @@
 import React from 'react';
-import {View, StyleSheet, ScrollView} from 'react-native';
-import {Button} from 'react-native-elements';
+import { View, StyleSheet, ScrollView } from 'react-native';
+import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import IconMC from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconMI from 'react-native-vector-icons/MaterialIcons';
 
 import IconAnt from 'react-native-vector-icons/AntDesign';
 
-export default function Menu({navigation}) {
+export default function Menu({ navigation }) {
   return (
     <ScrollView style={styles.viewDetails}>
       <View style={styles.container}>
         <View style={styles.containerLeft}>
           <Button
-            title="Saludar"
+            title="Animales"
+            onPress={() => navigation.navigate('Animales')}
+            icon={
+              <Icon
+                name="address-book"
+                size={25}
+                color="white"
+                style={{ marginRight: 10 }}
+              />
+            }
+            buttonStyle={styles.buttons1}
+          />
+          <Button
+            title="Saludos"
             onPress={() => navigation.navigate('ClientList')}
             icon={
               <Icon
                 name="address-book"
                 size={25}
                 color="white"
-                style={{marginRight: 10}}
+                style={{ marginRight: 10 }}
+              />
+            }
+            buttonStyle={styles.buttons1}
+          />
+          <Button
+            title="Numeros"
+            onPress={() => navigation.navigate('ClientList')}
+            icon={
+              <Icon
+                name="address-book"
+                size={25}
+                color="white"
+                style={{ marginRight: 10 }}
+              />
+            }
+            buttonStyle={styles.buttons1}
+          />
+           <Button
+            title="Colores"
+            onPress={() => navigation.navigate('ClientList')}
+            icon={
+              <Icon
+                name="address-book"
+                size={25}
+                color="white"
+                style={{ marginRight: 10 }}
+              />
+            }
+            buttonStyle={styles.buttons1}
+          />
+          <Button
+            title="Verduras"
+            onPress={() => navigation.navigate('ClientList')}
+            icon={
+              <Icon
+                name="address-book"
+                size={25}
+                color="white"
+                style={{ marginRight: 10 }}
               />
             }
             buttonStyle={styles.buttons1}
@@ -29,14 +81,53 @@ export default function Menu({navigation}) {
         </View>
         <View style={styles.containerRight}>
           <Button
-            title="Diccionario"
+            title="Cuerpo"
             onPress={() => navigation.navigate('PrizeList')}
             icon={
               <IconAnt
                 name="gift"
                 size={15}
                 color="white"
-                style={{marginRight: 10}}
+                style={{ marginRight: 10 }}
+              />
+            }
+            buttonStyle={styles.buttons2}
+          />
+          <Button
+            title="Cosas"
+            onPress={() => navigation.navigate('PrizeList')}
+            icon={
+              <IconAnt
+                name="gift"
+                size={15}
+                color="white"
+                style={{ marginRight: 10 }}
+              />
+            }
+            buttonStyle={styles.buttons2}
+          />
+          <Button
+            title="Familia"
+            onPress={() => navigation.navigate('PrizeList')}
+            icon={
+              <IconAnt
+                name="gift"
+                size={15}
+                color="white"
+                style={{ marginRight: 10 }}
+              />
+            }
+            buttonStyle={styles.buttons2}
+          />
+           <Button
+            title="Frutas"
+            onPress={() => navigation.navigate('PrizeList')}
+            icon={
+              <IconAnt
+                name="gift"
+                size={15}
+                color="white"
+                style={{ marginRight: 10 }}
               />
             }
             buttonStyle={styles.buttons2}

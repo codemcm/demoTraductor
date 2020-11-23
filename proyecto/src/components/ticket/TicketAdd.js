@@ -18,7 +18,7 @@ import styleGeneral from "../styleBase/generalStyle";
 
 export default function TicketAdd({ route, navigation }) {
   const { id } = route.params; //id cliente
-  const { nombre } = route.params;
+  const { nombre } = route.PALABRA;
   const [selectedValue, setSelectedValue] = useState("");
   const [load, setLoad] = useState(true);
   const [element, setElement] = useState(

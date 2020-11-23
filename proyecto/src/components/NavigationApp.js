@@ -1,12 +1,14 @@
 import * as React from 'react';
-import {View, Button, Text} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {createStackNavigator} from '@react-navigation/stack';
+import { View, Button, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import Icon5 from 'react-native-vector-icons/FontAwesome5';
 import IconAnt from 'react-native-vector-icons/AntDesign';
 
 import Login from './login/Login';
+import AnimalesListar from './animales/animalesListar';
+import AnimalDetalle from './animales/animalDetalle';
 import Menu from './menu/Menu';
 import ClientAdd from './client/clientAdd';
 import ClientList from './client/clientList';
@@ -33,8 +35,8 @@ const Tab = createBottomTabNavigator();
 function HomeTabs() {
   return (
     <Tab.Navigator
-      screenOptions={({route}) => ({
-        tabBarIcon: ({focused, color, size}) => {
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
           if (route.name === 'Salir') {
             return <IconAnt name="logout" size={24} color="#1C416C" />;
           } else if (route.name === 'Menu') {
@@ -174,6 +176,30 @@ export default function NavigationApp() {
           }}
           component={WinnerList}
         />
+
+        <Stack.Screen
+          name="Animales"
+          options={{
+            title: 'Lista de animales',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={AnimalesListar}
+        />
+        <Stack.Screen
+          name="AnimalDetalle"
+          options={{
+            title: 'Traducciones',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={AnimalDetalle}
+        />
+
         <Stack.Screen name="LotPlay" component={LotPlay} />
       </Stack.Navigator>
     </NavigationContainer>

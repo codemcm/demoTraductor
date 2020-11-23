@@ -1,9 +1,9 @@
 import ConfigApi from '../config/config';
 const axios = require('axios');
-function lotListAll() {
+function lotListAll(nombre) {
   return axios({
     method: 'GET',
-    url: ConfigApi.url + 'raffle/all/',
+    url: ConfigApi.url + 'palabras/:'+ nombre,
     responseType: 'text',
   }).then(function(response) {
     //console.log(response.data);

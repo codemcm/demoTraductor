@@ -1,6 +1,6 @@
 import ConfigApi from '../config/config';
 const axios = require('axios');
-async function clientListAll() {
+async function anilamesListar() {
   return await axios({
     method: 'GET',
     url: ConfigApi.url + 'palabras/',
@@ -10,4 +10,4 @@ async function clientListAll() {
   });
 }
 
-export {clientListAll};
+export {anilamesListar};
