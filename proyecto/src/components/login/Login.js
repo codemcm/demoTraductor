@@ -7,6 +7,8 @@ import { Text } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import { Button } from 'react-native-elements';
 import { CheckBox } from 'react-native-elements';
+import { useState } from 'react';
+
 import loginStyle from './loginStyle';
 export default function Login({ navigation }) {
   const [username, setusername] = useState('');
@@ -17,6 +19,8 @@ export default function Login({ navigation }) {
     } else {
       if (username == 'yael' || password == '123') {
         navigation.navigate('My app')
+      }else{
+        Alert.alert('Credenciales incorrectas');
       }
     }
   }
