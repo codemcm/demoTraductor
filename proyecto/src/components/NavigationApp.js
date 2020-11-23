@@ -9,6 +9,23 @@ import IconAnt from 'react-native-vector-icons/AntDesign';
 import Login from './login/Login';
 import AnimalesListar from './animales/animalesListar';
 import AnimalDetalle from './animales/animalDetalle';
+import CuerpoListar from "./cuerpo/cuerpoListar";
+import CuerpoDetalle from "./cuerpo/cuerpoDetalle";
+import SaludosListar from "./saludos/saludosListar";
+import SaludosDetalle from "./saludos/saludosDetalle";
+import CosasListar from "./cosas/cosasListar";
+import CosasDetalle from "./cosas/cosasDetalle";
+import NumeroListar from "./numeros/numeroListar";
+import NumeroDetalle from "./numeros/numeroDetalle";
+import FamiliaListar from "./familia/familiaListar";
+import FamiliaDetalle from "./familia/familiaDetalle";
+import ColoresListar from "./colores/coloresListar";
+import ColoresDetalle from "./colores/coloresDetalle";
+import FrutaListar from "./frutas/frutaListar";
+import FrutaDetalle from "./frutas/frutaDetalle";
+import VerdurasListar from "./verduras/verdurasListar";
+import VerduraDetalle from "./verduras/verduraDetalle";
+
 import Menu from './menu/Menu';
 import ClientAdd from './client/clientAdd';
 import ClientList from './client/clientList';
@@ -199,7 +216,194 @@ export default function NavigationApp() {
           }}
           component={AnimalDetalle}
         />
+        <Stack.Screen
+          name="ListaCuerpo"
+          options={{
+            title: 'Lista Cuerpo',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={CuerpoListar}
+        />
+        <Stack.Screen
+          name="CuerpoDetalle"
+          options={{
+            title: 'Cuerpo',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={CuerpoDetalle}
+        />
 
+
+        <Stack.Screen
+          name="SaludosListar"
+          options={{
+            title: 'SaludosListar',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={SaludosListar}
+        />
+        <Stack.Screen
+          name="SaludosDetalle"
+          options={{
+            title: 'SaludosDetalle',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={SaludosDetalle}
+        />
+
+
+        <Stack.Screen
+          name="CosasListar"
+          options={{
+            title: 'CosasListar',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={CosasListar}
+        />
+        <Stack.Screen
+          name="CosasDetalle"
+          options={{
+            title: 'CosasDetalle',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={CosasDetalle}
+        />
+
+
+        <Stack.Screen
+          name="NumeroListar"
+          options={{
+            title: 'NumeroListar',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={NumeroListar}
+        />
+        <Stack.Screen
+          name="NumeroDetalle"
+          options={{
+            title: 'NumeroDetalle',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={NumeroDetalle}
+        />
+
+        <Stack.Screen
+          name="FamiliaListar"
+          options={{
+            title: 'FamiliaListar',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={FamiliaListar}
+        />
+        <Stack.Screen
+          name="FamiliaDetalle"
+          options={{
+            title: 'FamiliaDetalle',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={FamiliaDetalle}
+        />
+
+        <Stack.Screen
+          name="ColoresListar"
+          options={{
+            title: 'ColoresListar',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={ColoresListar}
+        />
+        <Stack.Screen
+          name="ColoresDetalle"
+          options={{
+            title: 'ColoresDetalle',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={ColoresDetalle}
+        />
+
+
+        <Stack.Screen
+          name="FrutaListar"
+          options={{
+            title: 'FrutaListar',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={FrutaListar}
+        />
+        <Stack.Screen
+          name="FrutaDetalle"
+          options={{
+            title: 'FrutaDetalle',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={FrutaDetalle}
+        />
+
+
+        <Stack.Screen
+          name="VerdurasListar"
+          options={{
+            title: 'VerdurasListar',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={VerdurasListar}
+        />
+        <Stack.Screen
+          name="VerduraDetalle"
+          options={{
+            title: 'VerduraDetalle',
+            headerStyle: {
+              backgroundColor: '#1C416C',
+            },
+            headerTintColor: '#fff',
+          }}
+          component={VerduraDetalle}
+        />
         <Stack.Screen name="LotPlay" component={LotPlay} />
       </Stack.Navigator>
     </NavigationContainer>

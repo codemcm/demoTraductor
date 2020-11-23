@@ -27,7 +27,7 @@ export default function Menu({ navigation }) {
           />
           <Button
             title="Saludos"
-            onPress={() => navigation.navigate('ClientList')}
+            onPress={() => navigation.navigate('SaludosListar')}
             icon={
               <Icon
                 name="address-book"
@@ -40,7 +40,7 @@ export default function Menu({ navigation }) {
           />
           <Button
             title="Numeros"
-            onPress={() => navigation.navigate('ClientList')}
+            onPress={() => navigation.navigate('NumeroListar')}
             icon={
               <Icon
                 name="address-book"
@@ -51,9 +51,9 @@ export default function Menu({ navigation }) {
             }
             buttonStyle={styles.buttons1}
           />
-           <Button
+          <Button
             title="Colores"
-            onPress={() => navigation.navigate('ClientList')}
+            onPress={() => navigation.navigate('ColoresListar')}
             icon={
               <Icon
                 name="address-book"
@@ -66,7 +66,7 @@ export default function Menu({ navigation }) {
           />
           <Button
             title="Verduras"
-            onPress={() => navigation.navigate('ClientList')}
+            onPress={() => navigation.navigate('VerdurasListar')}
             icon={
               <Icon
                 name="address-book"
@@ -82,7 +82,7 @@ export default function Menu({ navigation }) {
         <View style={styles.containerRight}>
           <Button
             title="Cuerpo"
-            onPress={() => navigation.navigate('PrizeList')}
+            onPress={() => navigation.navigate('ListaCuerpo')}
             icon={
               <IconAnt
                 name="gift"
@@ -95,7 +95,7 @@ export default function Menu({ navigation }) {
           />
           <Button
             title="Cosas"
-            onPress={() => navigation.navigate('PrizeList')}
+            onPress={() => navigation.navigate('CosasListar')}
             icon={
               <IconAnt
                 name="gift"
@@ -108,7 +108,7 @@ export default function Menu({ navigation }) {
           />
           <Button
             title="Familia"
-            onPress={() => navigation.navigate('PrizeList')}
+            onPress={() => navigation.navigate('FamiliaListar')}
             icon={
               <IconAnt
                 name="gift"
@@ -119,9 +119,9 @@ export default function Menu({ navigation }) {
             }
             buttonStyle={styles.buttons2}
           />
-           <Button
+          <Button
             title="Frutas"
-            onPress={() => navigation.navigate('PrizeList')}
+            onPress={() => navigation.navigate('FrutaListar')}
             icon={
               <IconAnt
                 name="gift"
