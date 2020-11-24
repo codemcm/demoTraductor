@@ -10,6 +10,8 @@ const usuarioController =   require('../controller/usuarioController');
 router.get('/usuario', usuarioController.findAll);
 router.get('/usuario/:name/:contrasenia', usuarioController.iniciaSesion);
 
-const palabraController =   require('../controller/palabraController');
-router.get('/palabra/:name', palabraController.findById);
+const palabrasController =   require('../controller/palabrasController');
+router.get('/palabra/:name', palabrasController.findById);
+router.get('/palabrasKind/:id', palabrasController.findByKind);
+
 module.exports = router;
