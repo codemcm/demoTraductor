@@ -1,6 +1,6 @@
 'use strict'; var dbConn = require('../modules/db.conf');
 //Employee object create
-var Employee = function (employee) {
+var Usuario = function (employee) {
     this.first_name = employee.first_name;
     this.last_name = employee.last_name;
     this.email = employee.email;
@@ -12,7 +12,7 @@ var Employee = function (employee) {
     this.created_at = new Date(); this.updated_at = new Date();
 };
 
-Employee.create = function (newEmp, result) {
+Usuario.create = function (newEmp, result) {
     dbConn.query("INSERT INTO employees set ?", newEmp,
         function (err, res) {
             if (err) {
@@ -24,7 +24,7 @@ Employee.create = function (newEmp, result) {
             }
         });
 };
-Employee.findById = function (id, result) {
+Usuario.findById = function (id, result) {
     dbConn.query("Select * from employees where id = ? ", id,
         function (err, res) {
             if (err) {
@@ -35,7 +35,7 @@ Employee.findById = function (id, result) {
             }
         });
 };
-Employee.findAll = function (result) {
+Usuario.findAll = function (result) {
     dbConn.query("Select * from usuario",
         function (err, res) {
             if (err) {
@@ -45,7 +45,7 @@ Employee.findAll = function (result) {
             }
         });
 };
-Employee.update = function (id, employee, result) {
+Usuario.update = function (id, employee, result) {
     dbConn.query("UPDATE employees SET first_name=?,last_name=?,email=?,phone=?,organization=?,designation=?,salary=? WHERE id = ?",
         [employee.first_name, employee.last_name, employee.email, employee.phone, employee.organization, employee.designation, employee.salary, id],
         function (err, res) {
@@ -56,5 +56,19 @@ Employee.update = function (id, employee, result) {
             }
         });
 };
-Employee.delete = function (id, result) { dbConn.query("DELETE FROM employees WHERE id = ?", [id], function (err, res) { if (err) { console.log("error: ", err); result(null, err); } else { result(null, res); } }); };
-module.exports = Employee;
+
+Usuario.iniciaSesion = function (name,contrasenia,  result) {
+    dbConn.query("Select name from usuario where name = ? AND contrasenia= ? ", [name,contrasenia],
+        function (err, res) {
+            if (err) {
+                console.log("error: ", err);
+                result(err, null);
+            } else {
+                result(null, res);
+            }
+        });
+};
+
+
+Usuario.delete = function (id, result) { dbConn.query("DELETE FROM employees WHERE id = ?", [id], function (err, res) { if (err) { console.log("error: ", err); result(null, err); } else { result(null, res); } }); };
+module.exports = Usuario;

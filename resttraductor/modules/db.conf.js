@@ -5,7 +5,7 @@ const dbConn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'traductor_y'
+    database: 'traductor'
 });
 dbConn.connect(function (err) {
     if (err) throw err; console.log("Database Connected!");

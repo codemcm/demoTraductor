@@ -1,11 +1,17 @@
 'use strict';
-const Employee = require('../model/usuarioModel');
+const Usuario = require('../model/usuarioModel');
 exports.findAll = function (req, res) {
-    Employee.findAll(function (err, employee) {
+    Usuario.findAll(function (err, usuario) {
         console.log('controller')
         if (err)
             res.send(err);
-        console.log('res', employee);
-        res.send(employee);
+        console.log('res', usuario);
+        res.send(usuario);
+    });
+};
+
+exports.iniciaSesion = function (req, res) {
+    Usuario.iniciaSesion(req.params.name,req.params.contrasenia, function (err, employee) {
+        if (err) res.send(err); res.json(employee);
     });
 };
