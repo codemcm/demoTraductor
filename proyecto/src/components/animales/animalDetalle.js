@@ -26,12 +26,7 @@ export default function ClientList({ route, navigation }) {
         return (
             <View>
                 <TouchableOpacity
-                    onPress={() =>
-                        navigation.navigate('TicketAdd', {
-                            id: objClient.client_id,
-                            nombre: objClient.PALABRA,
-                        })
-                    }
+                    onPress={() =>console.log("animal")}
                     underlayColor="white">
                     <View style={styles.item}>
                         <Icon

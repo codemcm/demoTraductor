@@ -47,4 +47,19 @@ Palabra.findByKind = function (id, result) {
             }
         });
 };
+
+//1. Definir funcion en Modelo.
+Palabra.getPalabrasEspTipo = function (id, result) {
+    dbConn.query("SELECT P.palabras_id as ID, P.palabra as PALABRA, P.nombreimagen FROM palabras P"
+    + "     WHERE idiomas_id=1 "
+    + " AND P.tipos_id = ? ", id,
+        function (err, res) {
+            if (err) {
+                console.log("error: ", err); result(null, err);
+            } else {
+                console.log('datos : ', res); result(null, res);
+            }
+        });
+};
+
 module.exports = Palabra;

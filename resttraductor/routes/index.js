@@ -14,4 +14,6 @@ const palabrasController =   require('../controller/palabrasController');
 router.get('/palabra/:name', palabrasController.findById);
 router.get('/palabrasKind/:id', palabrasController.findByKind);
 
+router.get('/palabrastipo/:id', palabrasController.getPalabrasEspTipo);
+
 module.exports = router;

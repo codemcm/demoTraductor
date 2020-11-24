@@ -21,3 +21,10 @@ exports.findAll = function (req, res) {
         res.send(palabras);
     });
 };
+
+//paso 2 definir controlador
+exports.getPalabrasEspTipo = function (req, res) {
+    Palabras.getPalabrasEspTipo(req.params.id, function (err, palabras) {
+        if (err) res.send(err); res.json(palabras);
+    });
+};

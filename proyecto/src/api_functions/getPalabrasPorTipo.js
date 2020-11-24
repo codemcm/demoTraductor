@@ -3,7 +3,7 @@ const axios = require('axios');
 async function getPalabrasPorTipo(id) {
   return await axios({
     method: 'GET',
-    url: ConfigApi.url + 'palabraGeneral/'+id,
+    url: ConfigApi.url + 'palabrastipo/'+id,
     responseType: 'text',
   }).then(function(response) {
     return response;
