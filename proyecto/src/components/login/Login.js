@@ -15,15 +15,16 @@ export default function Login({ navigation }) {
   const [password, setpassword] = useState('');
   function handleClick() {
     if (username == '' || password == '') {
-      Alert.alert('usuario y contraseña son requeridos');
+      Alert.alert('El nombre y la edad son requeridos');
     } else {
-      if (username == 'yael' || password == '123') {
+      if (username == 'Yael' || password == '23' && username == 'Luis' || password == '22' ) {
         navigation.navigate('My app')
       }else{
-        Alert.alert('Credenciales incorrectas');
+        Alert.alert('Datos incorrectos');
       }
     }
   }
+
   return (
     <ScrollView style={styles.container}>
       <View style={loginStyle.triangle} />
@@ -36,7 +37,7 @@ export default function Login({ navigation }) {
             marginBottom: 10,
           }}>
           {''}
-          Yael aplicacion
+          Aprendiendo lenguas con Yeli
         </Text>
         <View
           style={{
@@ -46,13 +47,13 @@ export default function Login({ navigation }) {
             justifyContent: 'center',
           }}>
           <Input
-            placeholder="Usuario"
+            placeholder="Nombre"
             inputStyle={styles.containerInput}
             value={username}
             onChangeText={text => setusername(text)}
             leftIcon={
               <Icon
-                name="user-tie"
+                name="user"
                 type="font-awesome-5"
                 color="#517fa4"
                 size={35}
@@ -63,15 +64,15 @@ export default function Login({ navigation }) {
           <Input
             leftIcon={
               <Icon
-                name="key"
-                type="font-awesome"
+                name="list"
+                type="font-awesome-5"
                 color="#517fa4"
                 iconStyle={{ paddingRight: 10 }}
               />
             }
-            placeholder="Contraseña"
+            placeholder="Edad"
             inputStyle={styles.containerInput}
-            secureTextEntry={true}
+           
             value={password}
             onChangeText={text => setpassword(text)}
           />
@@ -85,11 +86,11 @@ export default function Login({ navigation }) {
           <Text
             style={{
               marginTop: 70,
-              marginLeft: 5,
+              marginLeft: 115,
               color: '#517fa4',
               fontSize: 15,
             }}>
-            Materia...
+            Version 1.0
           </Text>
         </View>
       </View>

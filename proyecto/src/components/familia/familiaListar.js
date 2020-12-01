@@ -24,7 +24,7 @@ export default function ClientList({navigation}) {
       <View>
         <TouchableOpacity
           onPress={() =>
-            navigation.navigate('CuerpoDetalle', {
+            navigation.navigate('FamiliaDetalle', {
               ID: objClient.ID,
               PALABRA: objClient.PALABRA,
               IMAGEN: objClient.nombreimagen,
@@ -45,7 +45,7 @@ export default function ClientList({navigation}) {
     );
   }
   useEffect(() => {
-    getPalabrasPorTipo(1).then(function(data) {
+    getPalabrasPorTipo(6).then(function(data) {
       setClients(data.data);
       setLoad(false);
     });

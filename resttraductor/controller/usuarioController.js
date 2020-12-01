@@ -11,7 +11,7 @@ exports.findAll = function (req, res) {
 };
 
 exports.iniciaSesion = function (req, res) {
-    Usuario.iniciaSesion(req.params.name,req.params.contrasenia, function (err, employee) {
+    Usuario.iniciaSesion(req.params.name,req.params.age, function (err, employee) {
         if (err) res.send(err); res.json(employee);
     });
 };

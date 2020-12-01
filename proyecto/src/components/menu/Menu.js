@@ -4,7 +4,6 @@ import { Button } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import IconMC from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconMI from 'react-native-vector-icons/MaterialIcons';
-
 import IconAnt from 'react-native-vector-icons/AntDesign';
 
 export default function Menu({ navigation }) {
@@ -17,9 +16,9 @@ export default function Menu({ navigation }) {
             onPress={() => navigation.navigate('Animales')}
             icon={
               <Icon
-                name="address-book"
-                size={25}
-                color="white"
+                name="gift"
+                size={25}/*Tamano de los iconos*/
+                color="white"/*Color de los iconos*/
                 style={{ marginRight: 10 }}
               />
             }
@@ -30,7 +29,7 @@ export default function Menu({ navigation }) {
             onPress={() => navigation.navigate('SaludosListar')}
             icon={
               <Icon
-                name="address-book"
+                name="gift"
                 size={25}
                 color="white"
                 style={{ marginRight: 10 }}
@@ -43,7 +42,7 @@ export default function Menu({ navigation }) {
             onPress={() => navigation.navigate('NumeroListar')}
             icon={
               <Icon
-                name="address-book"
+                name="gift"
                 size={25}
                 color="white"
                 style={{ marginRight: 10 }}
@@ -56,7 +55,7 @@ export default function Menu({ navigation }) {
             onPress={() => navigation.navigate('ColoresListar')}
             icon={
               <Icon
-                name="address-book"
+                name="gift"
                 size={25}
                 color="white"
                 style={{ marginRight: 10 }}
@@ -69,7 +68,7 @@ export default function Menu({ navigation }) {
             onPress={() => navigation.navigate('VerdurasListar')}
             icon={
               <Icon
-                name="address-book"
+                name="gift"
                 size={25}
                 color="white"
                 style={{ marginRight: 10 }}
@@ -86,12 +85,12 @@ export default function Menu({ navigation }) {
             icon={
               <IconAnt
                 name="gift"
-                size={15}
+                size={25}
                 color="white"
                 style={{ marginRight: 10 }}
               />
             }
-            buttonStyle={styles.buttons2}
+            buttonStyle={styles.buttons1}
           />
           <Button
             title="Cosas"
@@ -99,12 +98,12 @@ export default function Menu({ navigation }) {
             icon={
               <IconAnt
                 name="gift"
-                size={15}
+                size={25}
                 color="white"
                 style={{ marginRight: 10 }}
               />
             }
-            buttonStyle={styles.buttons2}
+            buttonStyle={styles.buttons1}
           />
           <Button
             title="Familia"
@@ -112,12 +111,12 @@ export default function Menu({ navigation }) {
             icon={
               <IconAnt
                 name="gift"
-                size={15}
+                size={25}
                 color="white"
                 style={{ marginRight: 10 }}
               />
             }
-            buttonStyle={styles.buttons2}
+            buttonStyle={styles.buttons1}
           />
           <Button
             title="Frutas"
@@ -125,12 +124,12 @@ export default function Menu({ navigation }) {
             icon={
               <IconAnt
                 name="gift"
-                size={15}
+                size={25}
                 color="white"
                 style={{ marginRight: 10 }}
               />
             }
-            buttonStyle={styles.buttons2}
+            buttonStyle={styles.buttons1}
           />
         </View>
       </View>
@@ -166,7 +165,6 @@ const styles = StyleSheet.create({
     marginTop: 2,
     marginBottom: 10,
     padding: 35,
-
-    backgroundColor: '#4F7CAF',
+    backgroundColor: '#3D618A',
   },
 });

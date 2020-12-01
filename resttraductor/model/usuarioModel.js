@@ -57,8 +57,8 @@ Usuario.update = function (id, employee, result) {
         });
 };
 
-Usuario.iniciaSesion = function (name,contrasenia,  result) {
-    dbConn.query("Select name from usuario where name = ? AND contrasenia= ? ", [name,contrasenia],
+Usuario.iniciaSesion = function (name,age,  result) {
+    dbConn.query("Select name,age from usuario where name = ? AND age= ? ", [name,age],
         function (err, res) {
             if (err) {
                 console.log("error: ", err);

@@ -24,7 +24,7 @@ export default function ClientList({navigation}) {
       <View>
         <TouchableOpacity
           onPress={() =>
-            navigation.navigate('CuerpoDetalle', {
+            navigation.navigate('SaludosDetalle', {
               ID: objClient.ID,
               PALABRA: objClient.PALABRA,
               IMAGEN: objClient.nombreimagen,

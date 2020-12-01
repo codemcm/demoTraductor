@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 const usuarioController =   require('../controller/usuarioController');
 router.get('/usuario', usuarioController.findAll);
-router.get('/usuario/:name/:contrasenia', usuarioController.iniciaSesion);
+router.get('/usuario/:name/:age', usuarioController.iniciaSesion);
 
 const palabrasController =   require('../controller/palabrasController');
 router.get('/palabra/:name', palabrasController.findById);

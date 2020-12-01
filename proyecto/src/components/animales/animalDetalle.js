@@ -59,7 +59,12 @@ export default function ClientList({ route, navigation }) {
 
         return (
             <View style={generalStyle.container}>
-                <Text>Palabra {PALABRA}</Text>
+                <Text style={{
+                    padding:10,
+                    marginTop: 20,
+                    marginLeft: 50,
+                    color: 'red',
+                    fontSize: 24,}}>Palabra: {PALABRA} </Text>
                 <FlatList
                     style={styles.flatl}
                     data={clients}
@@ -67,11 +72,25 @@ export default function ClientList({ route, navigation }) {
                     keyExtractor={item => String(item.client_id)}
                     ItemSeparatorComponent={separator}
                 />
-                <Text>Imagen del animal... {'./picture.jgp'} </Text>
-                <Image
-                    style={styles.tinyLogo}
-                    source={require('./picture.png')}
-                />
+                <Text style={{
+                    marginLeft: 50,
+                    color: 'indigo',
+                    padding:20,
+                    fontSize: 20,}}>Imagen de: {IMAGEN} </Text>
+
+                <Image style = { { width : 100 , height : 100, marginTop:100}} 
+                    style={styles.flatl}
+                    source={require('./imagenes/Gato.png')}
+                    /*source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}*/
+                    />
             </View>
         );
     }

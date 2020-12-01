@@ -19,20 +19,15 @@ function separator() {
 
 export default function ClientList({ route, navigation }) {
     const { ID, PALABRA, IMAGEN } = route.params; //id cliente
-    const { imagePath } = '../imagenes/' + IMAGEN + '.jpg'
+    const { imagePath } = '../imagenes/' + IMAGEN + '.png'
     var [clients, setClients] = useState('');
     const [load, setLoad] = useState(true);
     function Item({ objClient }) {
         return (
             <View>
                 <TouchableOpacity
-                    onPress={() =>
-                        navigation.navigate('TicketAdd', {
-                            id: objClient.client_id,
-                            nombre: objClient.PALABRA,
-                        })
-                    }
-                    underlayColor="white">
+                     onPress={() =>console.log("numero")}
+                     underlayColor="white">
                     <View style={styles.item}>
                         <Icon
                             name="arrow-circle-right"
@@ -64,7 +59,12 @@ export default function ClientList({ route, navigation }) {
 
         return (
             <View style={generalStyle.container}>
-                <Text>Palabra {PALABRA}</Text>
+                <Text style={{
+                    padding:10,
+                    marginTop: 20,
+                    marginLeft: 50,
+                    color: 'red',
+                    fontSize: 24,}}>Palabra: {PALABRA} </Text>
                 <FlatList
                     style={styles.flatl}
                     data={clients}
@@ -72,11 +72,25 @@ export default function ClientList({ route, navigation }) {
                     keyExtractor={item => String(item.client_id)}
                     ItemSeparatorComponent={separator}
                 />
-                <Text>Imagen del animal... {'./picture.jgp'} </Text>
-                <Image
-                    style={styles.tinyLogo}
-                    source={require('./picture.png')}
-                />
+                <Text style={{
+                    marginLeft: 50,
+                    color: 'indigo',
+                    padding:20,
+                    fontSize: 20,}}>Imagen de: {IMAGEN} </Text>
+
+                <Image style = { { width : 10 , height : 10, marginTop:50}} 
+                    style={styles.flatl}
+                    source={require('./imagenes/Uno.png')}
+                    /*source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}
+                    source={require('./imagenes/.png')}*/
+                    />
             </View>
         );
     }
